@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import dumyBlogData from "../data/blogData";
 
 const Home = () => {
@@ -19,9 +20,12 @@ const Home = () => {
           Share your thoughts, learn from others, and explore quality blog posts
           crafted with passion.
         </p>
-        <button className="mt-4 px-6 py-2 bg-[#00ffae] text-black font-semibold rounded-full shadow hover:scale-105 transition cursor-pointer ">
+        <Link
+          to={"/blogs"}
+          className="mt-4 px-6 py-2 bg-[#00ffae] text-black font-semibold rounded-full shadow hover:scale-105 transition cursor-pointer "
+        >
           Explore Blogs
-        </button>
+        </Link>
       </section>
 
       {/* Blog Preview Cards */}
@@ -36,9 +40,12 @@ const Home = () => {
               By {blog.user.username}
             </p>
             <p className="text-gray-300 text-sm mb-4">{blog.subDescription}</p>
-            <button className="mt-auto text-[#00ffc8] text-left hover:underline text-sm cursor-pointer">
+            <Link
+              to={`/blog/${blog.id}`}
+              className="mt-auto text-[#00ffc8] text-left hover:underline text-sm cursor-pointer"
+            >
               Read More →
-            </button>
+            </Link>
           </div>
         ))}
       </section>

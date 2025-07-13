@@ -14,9 +14,12 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <FaFeatherAlt className="text-2xl text-[#00ffae]" />
-          <span className="text-2xl font-bold tracking-wide bg-gradient-to-r from-[#00ffae] to-[#00d4ff] text-transparent bg-clip-text">
+          <Link
+            to={"/"}
+            className="text-2xl font-bold tracking-wide bg-gradient-to-r from-[#00ffae] to-[#00d4ff] text-transparent bg-clip-text"
+          >
             Bloggr
-          </span>
+          </Link>
         </div>
 
         {/* Desktop Links */}
